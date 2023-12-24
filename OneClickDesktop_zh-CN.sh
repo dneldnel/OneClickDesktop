@@ -19,7 +19,7 @@
 #您可以在这里修改Guacamole源码下载链接。
 #访问https://guacamole.apache.org/releases/获取最新源码。
 
-GUACAMOLE_DOWNLOAD_LINK="https://github.com/ampetervip/OneClickDesktop/raw/main/guacamole-server-1.2.0.tar.gz"
+GUACAMOLE_DOWNLOAD_LINK="https://github.com/dneldnel/OneClickDesktop/raw/main/guacamole-server-1.2.0.tar.gz"
 GUACAMOLE_VERSION="1.2.0"
 
 #此脚本仅支持Ubuntu 18/20, Debian 10, 以及CentOS 7/8.
@@ -381,7 +381,7 @@ function install_guacamole_web
 	echo "开始安装Guacamole Web应用..."
 	cd $CurrentDir
 	# wget https://downloads.apache.org/guacamole/$GUACAMOLE_VERSION/binary/guacamole-$GUACAMOLE_VERSION.war
- 	wget https://github.com/ampetervip/OneClickDesktop/raw/main/guacamole-1.2.0.war
+ 	wget https://github.com/dneldnel/OneClickDesktop/raw/main/guacamole-1.2.0.war
 	if [ "$OS" = "CENTOS7" ] || [ "$OS" = "CENTOS8" ] ; then
 		# mv guacamole-$GUACAMOLE_VERSION.war /etc/tomcat9/webapps/guacamole.war
   		mv guacamole-1.2.0.war /etc/tomcat9/webapps/guacamole.war
