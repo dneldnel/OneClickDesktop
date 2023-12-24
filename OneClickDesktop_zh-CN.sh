@@ -380,11 +380,14 @@ function install_guacamole_web
 	echo 
 	echo "开始安装Guacamole Web应用..."
 	cd $CurrentDir
-	wget https://downloads.apache.org/guacamole/$GUACAMOLE_VERSION/binary/guacamole-$GUACAMOLE_VERSION.war
+	# wget https://downloads.apache.org/guacamole/$GUACAMOLE_VERSION/binary/guacamole-$GUACAMOLE_VERSION.war
+ 	wget https://github.com/ampetervip/OneClickDesktop/raw/main/guacamole-1.2.0.war
 	if [ "$OS" = "CENTOS7" ] || [ "$OS" = "CENTOS8" ] ; then
-		mv guacamole-$GUACAMOLE_VERSION.war /etc/tomcat9/webapps/guacamole.war
+		# mv guacamole-$GUACAMOLE_VERSION.war /etc/tomcat9/webapps/guacamole.war
+  		mv guacamole-1.2.0.war /etc/tomcat9/webapps/guacamole.war
 	else
-		mv guacamole-$GUACAMOLE_VERSION.war /var/lib/tomcat9/webapps/guacamole.war
+		# mv guacamole-$GUACAMOLE_VERSION.war /var/lib/tomcat9/webapps/guacamole.war
+  		mv guacamole-1.2.0.war /var/lib/tomcat9/webapps/guacamole.war
 	fi
 	systemctl restart tomcat9 guacd
 	echo 
